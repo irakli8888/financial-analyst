@@ -57,7 +57,7 @@ def get_sentiment_analysis(ticker, news):
 
     messages.append(HumanMessage(content=mes))
     res = chat(messages)
-
+    print(res.content)
     return res.content
 
 
@@ -91,6 +91,7 @@ def get_industry_analysis(ticker):
     mes = f"Представьте анализ отрасли {industry} и сектора {sector}"
     messages.append(HumanMessage(content=mes))
     res = chat(messages)
+    print(res.content)
     return res.content
 
 
@@ -105,6 +106,7 @@ def get_final_analysis(ticker, comparisons, sentiment_analysis, analyst_ratings,
 
     messages.append(HumanMessage(content=mes))
     res = chat(messages)
+    print(res.content)
 
     return res.content
 
@@ -147,6 +149,7 @@ def rank_companies(industry, analyses, prices):
 
     messages.append(HumanMessage(content=mes))
     res = chat(messages)
+    print(res.content)
 
     return res.content
 
